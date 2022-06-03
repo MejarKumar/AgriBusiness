@@ -8,19 +8,8 @@ function Navbar() {
     const [click, setClick] = useState(false);
     const [dropdown, setDropdown] = useState(false);
 
-
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
-    const [background, setBackground] = useState(true);
-
-    const onmouseenter = () => {
-        console.log(window.scrollY);
-        if (window.scrollY >= 100) {
-            setBackground(true);
-        }
-    };
-
-
 
     const onMouseEnter = () => {
         if (window.innerWidth < 960) {
@@ -38,52 +27,49 @@ function Navbar() {
         }
     };
 
-
-
-
     return (
         <>
-            <nav className="navbar_heading"  >
+            <nav className='navbar'>
                 <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                    Agri<span style={{ "color": "green" }}>Business</span>
+                    EPIC
                     <i class='fab fa-firstdraft' />
                 </Link>
-                <div className='menu_icon' onClick={handleClick}>
+                <div className='menu-icon' onClick={handleClick}>
                     <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                 </div>
-                <ul className={click ? 'nav_menu active' : 'nav_menu'}>
-                    <li className='nav_item'>
-                        <Link to='/' className='nav_links' onClick={closeMobileMenu}>
+                <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+                    <li className='nav-item'>
+                        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                             Home
                         </Link>
                     </li>
                     <li
-                        className='nav_item'
+                        className='nav-item'
                         onMouseEnter={onMouseEnter}
                         onMouseLeave={onMouseLeave}
                     >
                         <Link
                             to='/services'
-                            className='nav_links'
+                            className='nav-links'
                             onClick={closeMobileMenu}
                         >
                             Services <i className='fas fa-caret-down' />
                         </Link>
                         {dropdown && <Dropdown />}
                     </li>
-                    <li className='nav_item'>
+                    <li className='nav-item'>
                         <Link
                             to='/products'
-                            className='nav_links'
+                            className='nav-links'
                             onClick={closeMobileMenu}
                         >
                             Products
                         </Link>
                     </li>
-                    <li className='nav_item'>
+                    <li className='nav-item'>
                         <Link
                             to='/contact-us'
-                            className='nav_links'
+                            className='nav-links'
                             onClick={closeMobileMenu}
                         >
                             Contact Us
@@ -99,7 +85,9 @@ function Navbar() {
                         </Link>
                     </li>
                 </ul>
-                <Button />
+                <Button
+                    content="Login"
+                />
             </nav>
         </>
     );

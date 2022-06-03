@@ -13,7 +13,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     cursor: pointer;
 }
 
@@ -33,9 +33,11 @@
     color: #32502E;
     padding: 16px;
 }
-.dropdown-link:hover{
+
+.dropdown-link:hover {
     color: #DFEEEA;
 }
+
 @media screen and (max-width: 960px) {
     .fa-caret-down {
         display: none;

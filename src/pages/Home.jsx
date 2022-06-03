@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <Router>
       <Navbar />
-      {/* <HeroSection /> */}
-      {/* <AboutUs /> */}
-      {/* <BlogSection /> */}
+      <HeroSection />
+      <AboutUs />
+      <BlogSection />
     </Router>
   );
 }

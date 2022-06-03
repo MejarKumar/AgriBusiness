@@ -8,7 +8,7 @@
     outline: none;
     border: none;
     font-size: 18px;
-    color:bisque;
+    color: bisque;
     cursor: pointer;
     background-color: var(--primary);
 }
